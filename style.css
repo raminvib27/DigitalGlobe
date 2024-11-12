@@ -5,6 +5,7 @@ body {
     font-family: Arial, sans-serif;  /* Set a clean, simple font */
     margin: 0;
     padding: 0;
+    overflow: hidden;  /* Prevent scrollbars when the mouse effect is large */
 }
 
 /* Styling for the title */
@@ -20,19 +21,21 @@ p {
     padding: 10px;
 }
 
-/* Add a hover effect to paragraphs */
+/* Glowing effect style */
+#glow-effect {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ff9800;  /* Orange glow color */
+    pointer-events: none;  /* Prevent it from blocking other interactions */
+    opacity: 0.6;  /* Slight transparency */
+    transform: translate(-50%, -50%); /* Center the glow effect relative to the mouse */
+    transition: width 0.1s ease, height 0.1s ease, opacity 0.2s ease;
+}
+
+/* Optional: Add a hover effect for other elements */
 p:hover {
-    color: #ff9800;  /* Change text color to orange when hovered */
-    transition: color 0.3s ease;  /* Smooth transition */
-}
-
-/* Add a hover effect to links */
-a {
-    color: #ff9800;  /* Orange color for links */
-    text-decoration: none;  /* Remove underline */
-}
-
-a:hover {
-    text-decoration: underline;  /* Underline the link on hover */
-    color: #ff5722;  /* Darker orange when hovered */
+    color: #ff9800;
+    transition: color 0.3s ease;
 }
