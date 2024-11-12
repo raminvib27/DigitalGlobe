@@ -1,0 +1,38 @@
+/* Set dark background color for the whole page */
+body {
+    background-color: #121212;  /* Dark gray background */
+    color: #fff;  /* White text */
+    font-family: Arial, sans-serif;  /* Set a clean, simple font */
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling for the title */
+h1 {
+    text-align: center;
+    padding: 50px;
+}
+
+/* Basic styling for paragraphs */
+p {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+/* Add a hover effect to paragraphs */
+p:hover {
+    color: #ff9800;  /* Change text color to orange when hovered */
+    transition: color 0.3s ease;  /* Smooth transition */
+}
+
+/* Add a hover effect to links */
+a {
+    color: #ff9800;  /* Orange color for links */
+    text-decoration: none;  /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline;  /* Underline the link on hover */
+    color: #ff5722;  /* Darker orange when hovered */
+}
