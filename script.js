@@ -10,11 +10,18 @@ document.addEventListener("mousemove", (event) => {
     glowEffect.style.left = `${mouseX}px`;
     glowEffect.style.top = `${mouseY}px`;
 
-    // Optionally, make the glow effect size change based on the mouse speed
+    // Change the size and opacity of the glow effect based on the speed of mouse movement
     const speed = Math.abs(event.movementX) + Math.abs(event.movementY);
-    glowEffect.style.width = `${100 + speed / 2}px`; // Increase size based on speed
-    glowEffect.style.height = `${100 + speed / 2}px`;
 
-    // Optional: fade effect based on mouse speed
-    glowEffect.style.opacity = 0.6 + speed / 2000;
+    // Smoothly adjust the size of the glow based on the mouse speed
+    const glowSize = 100 + speed / 2;  // Glow size increases with speed
+    glowEffect.style.width = `${glowSize}px`;
+    glowEffect.style.height = `${glowSize}px`;
+
+    // Optional: Adjust the opacity based on mouse speed to make the effect feel more dynamic
+    const glowOpacity = 0.4 + speed / 2000;  // Adjust opacity for a smoother effect
+    glowEffect.style.opacity = glowOpacity;
+
+    // Smoothly change the box-shadow glow effect based on size
+    glowEffect.style.boxShadow = `0 0 ${glowSize / 4}px rgba(255, 152, 0, 0.7)`;
 });
