@@ -30,15 +30,14 @@ p:hover {
 /* Glowing effect style */
 #glow-effect {
     position: absolute;
-    width: 150px;
-    height: 150px;
+    width: 200px;  /* Starting size of the glow */
+    height: 200px;
     border-radius: 50%;
-    background-color: #ff9800;  /* Orange glow color */
     pointer-events: none;  /* Prevent it from blocking other interactions */
-    opacity: 0.4;  /* Slight transparency */
+    opacity: 0;  /* Start as invisible */
     transform: translate(-50%, -50%); /* Center the glow effect relative to the mouse */
-    transition: width 0.1s ease, height 0.1s ease, opacity 0.2s ease; /* Smooth transitions */
-    box-shadow: 0 0 20px rgba(255, 152, 0, 0.7); /* Soft outer glow */
+    transition: width 0.2s ease, height 0.2s ease, opacity 0.5s ease; /* Smooth transitions */
+    background: radial-gradient(circle, rgba(255, 152, 0, 0) 0%, rgba(255, 152, 0, 1) 100%); /* Glow with fade from center */
 }
 
 /* Optional: Add a hover effect for other elements */
