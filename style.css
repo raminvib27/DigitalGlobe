@@ -25,20 +25,20 @@ p {
 /* Hover effect on paragraphs (text will change to orange) */
 p:hover {
     color: #ff9800;
-    transition: color 0.3s ease;  /* Smooth transition on hover */
 }
 
 /* Glowing effect style */
 #glow-effect {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     background-color: #ff9800;  /* Orange glow color */
     pointer-events: none;  /* Prevent it from blocking other interactions */
-    opacity: 0.6;  /* Slight transparency */
+    opacity: 0.4;  /* Slight transparency */
     transform: translate(-50%, -50%); /* Center the glow effect relative to the mouse */
-    transition: width 0.1s ease, height 0.1s ease, opacity 0.2s ease;
+    transition: width 0.1s ease, height 0.1s ease, opacity 0.2s ease; /* Smooth transitions */
+    box-shadow: 0 0 20px rgba(255, 152, 0, 0.7); /* Soft outer glow */
 }
 
 /* Optional: Add a hover effect for other elements */
