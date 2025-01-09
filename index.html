@@ -8,14 +8,29 @@
 </head>
 <body>
     <div class="center-container">
-        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" class="logo">
-        <form action="https://google.com/search" method="get" class="search-form">
-            <input type="text" name="q" class="search-box" placeholder="Search Google or type a URL">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo" class="logo">
+        <form class="search-form" onsubmit="redirectToGoogle(event)">
+            <input type="text" id="search-box" class="search-box" placeholder="Search Google or type a URL">
             <div class="button-container">
                 <button type="submit" class="search-button">Google Search</button>
-                <button type="button" class="search-button">I'm Feeling Lucky</button>
+                <button type="button" class="search-button" onclick="feelingLucky()">I'm Feeling Lucky</button>
             </div>
         </form>
     </div>
+
+    <script>
+        function redirectToGoogle(event) {
+            event.preventDefault();
+            const query = document.getElementById('search-box').value;
+            const googleSearchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+            window.location.href = googleSearchUrl;
+        }
+
+        function feelingLucky() {
+            const query = document.getElementById('search-box').value;
+            const googleLuckyUrl = `https://www.google.com/search?btnI=1&q=${encodeURIComponent(query)}`;
+            window.location.href = googleLuckyUrl;
+        }
+    </script>
 </body>
 </html>
