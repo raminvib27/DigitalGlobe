@@ -1,52 +1,59 @@
-/* Set dark grey background color for the whole page */
 body {
-    background-color: #2c2c2c;  /* Dark grey background */
-    color: #fff;  /* White text by default */
-    font-family: Arial, sans-serif;  /* Set a clean, simple font */
     margin: 0;
-    padding: 0;
-    overflow: hidden;  /* Prevent scrollbars when the mouse effect is large */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
 }
 
-/* Styling for the title */
-h1 {
+.center-container {
     text-align: center;
-    padding: 50px;
 }
 
-/* Basic styling for paragraphs */
-p {
-    text-align: center;
-    font-size: 1.2em;
-    padding: 10px;
-    transition: color 0.3s ease;  /* Smooth transition to text color */
+.logo {
+    width: 270px;
+    margin-bottom: 20px;
 }
 
-/* Hover effect on paragraphs (text will change to orange) */
-p:hover {
-    color: #ff9800;
+.search-form {
+    display: inline-block;
+    width: 100%;
+    max-width: 600px;
 }
 
-/* Glowing effect style */
-#glow-effect {
-    position: absolute;
-    width: 200px;  /* Starting size of the glow */
-    height: 200px;
-    border-radius: 50%;
-    pointer-events: none;  /* Prevent it from blocking other interactions */
-    opacity: 0;  /* Start as invisible */
-    transform: translate(-50%, -50%); /* Center the glow effect relative to the mouse */
-    transition: width 0.2s ease, height 0.2s ease, opacity 0.5s ease; /* Smooth transitions */
-    background: radial-gradient(circle, rgba(255, 152, 0, 0) 0%, rgba(255, 152, 0, 1) 100%); /* Glow with fade from center */
+.search-box {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    outline: none;
+    transition: box-shadow 0.2s;
 }
 
-/* Optional: Add a hover effect for other elements */
-a {
-    color: #ff9800;
-    text-decoration: none;
+.search-box:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-a:hover {
-    text-decoration: underline;
-    color: #ff5722;
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #f8f9fa;
+    border: 1px solid #dfe1e5;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.search-button:hover {
+    background-color: #f1f3f4;
 }
